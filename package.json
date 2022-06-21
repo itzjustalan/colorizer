@@ -1,6 +1,7 @@
 {
 	"name": "colorizer",
 	"version": "0.0.1",
+	"type": "module",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -14,9 +15,6 @@
 		"@sveltejs/kit": "next",
 		"svelte": "^3.46.0"
 	},
-	"type": "module",
 	"dependencies": {
-		"@fontsource/fira-mono": "^4.5.0",
-		"cookie": "^0.4.1"
 	}
 }
