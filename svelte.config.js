@@ -18,6 +18,12 @@ const config = {
       onError: 'continue'
     },
 
+    alias: {
+      $components: 'src/lib/components',
+      $utils: 'src/lib/utils',
+      $src: 'src',
+    },
+
 		// Override http methods in the Todo forms
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']

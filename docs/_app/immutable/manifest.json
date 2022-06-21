@@ -1,100 +1,117 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-09a9c0f9.js",
+    "file": "start-3101cbcc.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-a3104a0f.js",
-      "_index-291179b9.js",
+      "_index-c06fd909.js",
+      "_index-ec2e9ba5.js",
       "_singletons-d1fb5791.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/about.svelte",
+      "src/routes/apps/[app].svelte",
       "src/routes/index.svelte",
       "src/routes/todos/index.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-398d9f57.js",
+    "file": "pages/__layout.svelte-f9d2e47a.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-a3104a0f.js"
+      "_index-c06fd909.js",
+      "_stores-632a5d35.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-da7c5ce3.css"
+      "assets/pages/__layout.svelte-901aed9b.css"
     ],
     "assets": [
-      "assets/svelte-logo-87df40b8.svg",
-      "assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
-      "assets/fira-mono-all-400-normal-1e3b098c.woff",
-      "assets/fira-mono-cyrillic-400-normal-c7d433fd.woff2",
-      "assets/fira-mono-greek-ext-400-normal-9e2fe623.woff2",
-      "assets/fira-mono-greek-400-normal-a8be01ce.woff2",
-      "assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
-      "assets/fira-mono-latin-400-normal-e43b3538.woff2"
+      "assets/svelte-logo-87df40b8.svg"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-a76b1aa3.js",
+    "file": "error.svelte-1bbfbe50.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-a3104a0f.js"
+      "_index-c06fd909.js"
     ]
   },
   "src/routes/about.svelte": {
-    "file": "pages/about.svelte-77123546.js",
+    "file": "pages/about.svelte-5c1c8b4e.js",
     "src": "src/routes/about.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-a3104a0f.js"
+      "_index-c06fd909.js"
     ],
     "css": [
       "assets/pages/about.svelte-bf4528fa.css"
     ]
   },
+  "src/routes/apps/[app].svelte": {
+    "file": "pages/apps/_app_.svelte-cb2ad74c.js",
+    "src": "src/routes/apps/[app].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-c06fd909.js",
+      "_stores-cb8f3ce3.js",
+      "_stores-632a5d35.js",
+      "_index-ec2e9ba5.js"
+    ]
+  },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-329c2f08.js",
+    "file": "pages/index.svelte-f5a02960.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-a3104a0f.js",
-      "_index-291179b9.js"
-    ],
-    "css": [
-      "assets/pages/index.svelte-e12bfb09.css"
+      "_index-c06fd909.js",
+      "_stores-cb8f3ce3.js",
+      "_index-ec2e9ba5.js"
     ]
   },
   "src/routes/todos/index.svelte": {
-    "file": "pages/todos/index.svelte-e30fadb6.js",
+    "file": "pages/todos/index.svelte-df5b944d.js",
     "src": "src/routes/todos/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-a3104a0f.js",
+      "_index-c06fd909.js",
       "_singletons-d1fb5791.js"
     ],
     "css": [
       "assets/pages/todos/index.svelte-a910a02d.css"
     ]
   },
-  "_index-a3104a0f.js": {
-    "file": "chunks/index-a3104a0f.js"
+  "_index-c06fd909.js": {
+    "file": "chunks/index-c06fd909.js"
   },
-  "_index-291179b9.js": {
-    "file": "chunks/index-291179b9.js",
+  "_index-ec2e9ba5.js": {
+    "file": "chunks/index-ec2e9ba5.js",
     "imports": [
-      "_index-a3104a0f.js"
+      "_index-c06fd909.js"
     ]
   },
   "_singletons-d1fb5791.js": {
     "file": "chunks/singletons-d1fb5791.js"
+  },
+  "_stores-632a5d35.js": {
+    "file": "chunks/stores-632a5d35.js",
+    "imports": [
+      "_index-c06fd909.js"
+    ]
+  },
+  "_stores-cb8f3ce3.js": {
+    "file": "chunks/stores-cb8f3ce3.js",
+    "imports": [
+      "_index-ec2e9ba5.js"
+    ]
   }
 }
