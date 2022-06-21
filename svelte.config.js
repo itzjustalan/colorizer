@@ -1,9 +1,22 @@
-import adapter from '@sveltejs/adapter-auto';
+// import adapter from '@sveltejs/adapter-auto';
+import adapter from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+      pages: 'docs',
+      assets: 'docs'
+    }),
+
+    prerender: {
+      concurrency: 10,
+      crawl: true,
+      default: true,
+      enabled: true,
+      entries: ['*'],
+      onError: 'continue'
+    },
 
 		// Override http methods in the Todo forms
 		methodOverride: {
