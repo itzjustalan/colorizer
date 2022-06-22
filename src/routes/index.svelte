@@ -9,7 +9,7 @@
 <h1>Colorizer</h1>
 
 {#each $appstore as app}
-	<li><a href={'/apps/'+app.name.toLowerCase()}>{app.name}</a></li>
+	<li><a href={'/colorizer/apps/'+app.name.toLowerCase()}>{app.name}</a></li>
 {/each}
 
 </section>

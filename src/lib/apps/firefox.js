@@ -4,6 +4,7 @@ export const Firefox = new BaseApp({
   name: 'Firefox',
   configName: 'manifest.json',
   icon: 'https://3u26hb1g25wn1xwo8g186fnd-wpengine.netdna-ssl.com/files/2019/10/Fx-Browser-icon-fullColor.svg',
+  format: 'hex?',
   colors: {
     bookmark_text: 'red',
     button_background_active: 'red',

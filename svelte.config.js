@@ -5,14 +5,19 @@ const dev = process.env.NODE_ENV === 'development';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+  compilerOptions: {
+    dev,
+  },
 	kit: {
 		adapter: adapter({
       pages: 'docs',
-      assets: 'docs'
+      assets: 'docs',
     }),
 
     paths: {
-			base: dev ? '' : '/colorizer',
+      // for gh-pages
+			base: '/colorizer',
+			// base: dev ? '' : '/colorizer',
 		},
 
     prerender: {

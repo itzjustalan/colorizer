@@ -4,6 +4,7 @@ export const Mutt = new BaseApp({
   name: 'Mutt',
   configName: 'colorizer.muttrc',
   icon: 'http://jasonwryan.com/images/post_images/mutt-1.png',
+  format: 'ansi?',
   colors: {
     errorFG: 'default',
     indicatorFG: 'default',
