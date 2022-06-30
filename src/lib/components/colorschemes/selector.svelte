@@ -13,10 +13,10 @@
 </script>
 
 <div>
-  color scheme selector
-  {$colorschemes[$appdata.colorscheme_index]?.name}
-
   {#if $colorschemes.length != 0}
+    selected color scheme:
+    {$colorschemes[$appdata.colorscheme_index]?.name??''}
+    <br>
     <select bind:value={$appdata.colorscheme_index}>
       {#each $colorschemes as colorscheme, index}
         <option value={index}>{colorscheme.name}</option>
@@ -26,19 +26,22 @@
   <button on:click={addNewColorscheme}>
     add new colorscheme
   </button>
+  <br>
+  <br>
 
-  colors selector:
-  {#if $colorschemes.length != 0}
+  colors:
+  {#if $colorschemes.length}
     <button on:click={addNewColor}>
       add new color
     </button>
   {/if}
-  {#if $colorschemes[$appdata.colorscheme_index]?.colors?.length != 0}
-      {#each $colorschemes[$appdata.colorscheme_index]?.colors ?? [] as color, index}
-        {index}:<PickBlock bind:color={color} />
-      {/each}
+  {#if $colorschemes[$appdata.colorscheme_index]?.colors?.length}
+    {#each $colorschemes[$appdata.colorscheme_index]?.colors ?? [] as color, index}
+      <!-- {index}: -->
+      <PickBlock bind:color={color} />
+    {/each}
   {/if}
 
 
-  <button on:click={(e)=>console.log($colorschemes)}>DDDDDDDDD</button>
+  <!-- <button on:click={(e)=>console.log($colorschemes)}>DDDDDDDDD</button> -->
 </div>

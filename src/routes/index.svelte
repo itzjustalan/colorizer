@@ -1,8 +1,5 @@
 <script>
   import { appstore } from "$src/stores";
-  // import { BaseApp } from "$lib/apps/base";
-  // import { Firefox } from "$lib/apps/firefox";
-  // console.log(Firefox, $store)
 </script>
 
 <section>
