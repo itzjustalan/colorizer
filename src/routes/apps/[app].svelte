@@ -7,6 +7,7 @@
   import { appstore } from "$src/stores";
   import { appdata } from "$src/stores";
   import { page } from "$app/stores";
+  import downloadTextAsFile from "$utils/downloadTextAsFile";
   import SelectBlock from "$components/colorschemes/select-block.svelte";
   import ColorschemeSelector from "$components/colorschemes/selector.svelte";
 
@@ -14,7 +15,6 @@
     (app) => app.name.toLowerCase() == $page.params.app
   );
 
-  // console.log($appdata.schemedata, "schemedata", $appdata.colorscheme_index);
   const testfn = () => {
     let colors = {};
     for (const [k, v] of Object.entries(
@@ -22,19 +22,21 @@
     )) {
       colors[k] = $colorschemes[$appdata.colorscheme_index]?.colors[v];
     }
-    // console.log(colors, app.buildConfig(colors));
+    console.log(app.configName, app.buildConfig(colors))
+  };
+  const downloadConfigFile = () => {
+    let colors = {};
+    for (const [k, v] of Object.entries(
+      $appdata.schemedata[$appdata.colorscheme_index]
+    )) {
+      colors[k] = $colorschemes[$appdata.colorscheme_index]?.colors[v];
+    }
+    downloadTextAsFile(app.configName, app.buildConfig(colors))
   };
 </script>
 
 
 <section>
-
-  <!-- <button
-    on:click={(e) => {
-      testfn();
-      console.log($appdata.schemedata, $appdata.colorscheme_index);
-    }}>DDDDDDDDD</button
-  > -->
 
   <a href="/colorizer">go home</a>
   <h1>{app?.name}</h1>
@@ -59,8 +61,19 @@
 
   <br>
   <br>
-  <div>
+  <!-- <div>
     {app.buildConfig(app.colors)}
-  </div>
+  </div> -->
   <img src={app.icon} alt={app.name} />
+
+
+  <br>
+  <button on:click={(e) => testfn()}>
+    LOG CONFIG FILE
+  </button>
+  <br>
+  <button on:click={(e) => downloadConfigFile()}>
+    DOWNLOAD CONFIG FILE
+  </button>
+
 </section>
